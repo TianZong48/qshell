@@ -1,4 +1,4 @@
-#简介
+# 简介
 
 `batchchtype`命令用来为空间中的文件设置存储类型。该操作发生在同一个空间中。（将文件设置为**低频存储** 或者 **普通存储**，默认：文件为**普通存储**）
 
@@ -34,14 +34,14 @@ qshell batchchtype [-force] <Bucket> <KeyFileTypeMapFile>
 ```
 
 上面，我们将`2015/03/22/qiniu.png`文件设置为低频存储了，诸如此类。
-把这个内容保存到文件`torename.txt`中，然后使用如下的命令将torename.txt中所有的文件进行存储类型改变。
+把这个内容保存到文件`tochangetype.txt`中，然后使用如下的命令将 tochangetype.txt中所有的文件进行存储类型改变。
 
 ```
-$ qshell batchchtype if-pbl torename.txt
+$ qshell batchchtype if-pbl tochangetype.txt
 ```
 
 2.如果不希望上面的重命名过程出现验证码提示，可以使用 `-force` 选项：
 
 ```
-$ qshell batchchtype -force if-pbl torename.txt
+$ qshell batchchtype -force if-pbl tochangetype.txt
 ```
